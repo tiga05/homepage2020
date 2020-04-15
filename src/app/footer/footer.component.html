@@ -23,23 +23,7 @@
       <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
 
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
+      
 
       </div>
       <!-- Grid column -->
@@ -53,48 +37,17 @@
         <ul class="list-unstyled">
           <li>
 
-            <a (click)="basicModal.show()">used 3rd party licenses</a>
-            <div mdbModal #basicModal="mdbModal" class="modal fade right" tabindex="-1" role="dialog"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                    <h4 class="modal-title" style="color:black" id="myModalLabel">used 3d party licenses</h4>
-                  </div>
-                  <div class="modal-body" style="color:black">
-                    <div style="font-weight: bold;">MDBoostrap License</div>
-                    Copyright (c) 2019 MDBootstrap.com
+            <a (click)="impressum.show()">Impressum</a>
 
-                    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-                    associated documentation files (the "Software"), to deal in the Software without restriction,
-                    including without limitation the rights to use, copy, modify, merge, publish, distribute,
-                    sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
-                    furnished to do so, subject to the following conditions:
-
-                    The above copyright notice and this permission notice shall be included in all copies or substantial
-                    portions of the Software.
-
-                    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-                    NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-                    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
-                    OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-                    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-                  </div>
-                </div>
-              </div>
-            </div>
           </li>
           <li>
-            <a href="#!">Link 2</a>
+            <a (click)="privacyPolicy.show()">Datenschutzerklärung</a>
           </li>
           <li>
-            <a href="#!">Link 3</a>
+            <a href="https://gruppe-keiler.de/" target="_blank">Partner Community Gruppe-Keiler</a>
           </li>
           <li>
-            <a href="#!">Link 4</a>
+            <a (click)="thirdPartyL.show()">used 3rd party licenses</a>
           </li>
         </ul>
 
@@ -107,8 +60,92 @@
   </div>
   <!-- Footer Links -->
 
-  <!-- Central Modal Small -->
+  <!-- Modal dialog Impressum-->
+  <div mdbModal #impressum="mdbModal" class="modal fade right" tabindex="-1" role="dialog"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="impressum.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" style="color:black" id="myModalLabel">Impressum</h4>
+      </div>
+      <div class="modal-body " style="color:black; text-align: center;">
+        <img src="assets/Impressum.png">       
 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal dialog Datenschutz-->
+<div mdbModal #privacyPolicy="mdbModal" class="modal fade right" tabindex="-1" role="dialog"
+aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close pull-right" aria-label="Close" (click)="privacyPolicy.hide()">
+        <span aria-hidden="true">×</span>
+      </button>
+      <h4 class="modal-title" style="color:black" id="myModalLabel">Datenschutz</h4>
+    </div>
+    <div class="modal-body" style="color:black">
+      <div style="font-weight: bold;">MDBoostrap License</div>
+      Copyright (c) 2019 MDBootstrap.com
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+      associated documentation files (the "Software"), to deal in the Software without restriction,
+      including without limitation the rights to use, copy, modify, merge, publish, distribute,
+      sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions:
+
+      The above copyright notice and this permission notice shall be included in all copies or substantial
+      portions of the Software.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+      NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+      OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+      CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    </div>
+  </div>
+</div>
+</div>
+
+ <!-- Modal dialog third part licenses-->
+  <div mdbModal #thirdPartyL="mdbModal" class="modal fade right" tabindex="-1" role="dialog"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="thirdPartyL.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" style="color:black" id="myModalLabel">3d party licenses</h4>
+      </div>
+      <div class="modal-body" style="color:black">
+        <div style="font-weight: bold;">MDBoostrap License</div>
+        Copyright (c) 2019 MDBootstrap.com
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+        associated documentation files (the "Software"), to deal in the Software without restriction,
+        including without limitation the rights to use, copy, modify, merge, publish, distribute,
+        sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in all copies or substantial
+        portions of the Software.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+        NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+        OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      </div>
+    </div>
+  </div>
+</div>
 
 </footer>
 <!-- Footer -->
